@@ -1,0 +1,181 @@
+/** 
+ * @Author zlx
+ * @Date 2018/4/23 下午5:23
+ */
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,1);
+    z-index: 1000;
+    -webkit-perspective: 800;
+    -webkit-perspective-origin: 50% 30%;
+}
+#container .close {
+    color: #fff;
+    text-align: right;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+    animation-play-state: paused;
+}
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotateY(0);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+.cube {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    -webkit-animation: spin 8s infinite linear;
+    -webkit-transform-style: preserve-3d;
+}
+.cube_no_animate {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+    -webkit-animation: none;
+}
+.cube .rect {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 125pt;
+    text-align: center;
+    line-height: 200px;
+    background-color: #82bb75;
+    opacity: 1;
+}
+.cube .cube1side {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(90deg) translateZ(100px);
+}
+.cube .cube2side {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(-90deg) translateZ(100px);
+}
+.cube .cube3side {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(-90deg) translateZ(100px);
+}
+.cube .cube4side {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(90deg) translateZ(100px);
+}
+.cube .cube5side {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateY(180deg) translateZ(100px);
+}
+.cube .cube6side {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) translateZ(100px);
+}
+.cube3 {
+    -webkit-animation: spin_one .4s 1 linear;
+    -webkit-transform: rotateY(-270deg);
+}
+.cube4 {
+    -webkit-animation: spin_one .4s 1 linear;
+    -webkit-transform: rotateY(-90deg);
+}
+.cube5 {
+    -webkit-animation: spin_one .4s 1 linear;
+    -webkit-transform: rotateY(-180deg);
+
+}
+.cube6 {
+    -webkit-animation: spin_one .4s 1 linear;
+    -webkit-transform: rotateY(0deg);
+}
+/*animate*/
+@-webkit-keyframes spin_one {
+    from {
+        -webkit-transform: rotateY(0);
+    }
+    to {
+        -webkit-transform: rotateY(-180deg);
+    }
+}
+@-webkit-keyframes spin3 {
+    from {
+        -webkit-transform: rotateY(-270deg);
+    }
+    to {
+        -webkit-transform: rotateY(-630deg);
+    }
+}
+@-webkit-keyframes spin4 {
+    from {
+        -webkit-transform: rotateY(-90deg);
+    }
+    to {
+        -webkit-transform: rotateY(-450deg);
+    }
+}
+@-webkit-keyframes spin5 {
+    from {
+        -webkit-transform: rotateY(-180deg);
+    }
+    to {
+        -webkit-transform: rotateY(-450deg);
+    }
+}
+@-webkit-keyframes spin6 {
+    from {
+        -webkit-transform: rotateY(0);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+.cubebox3 {
+    -webkit-animation: spin3 8s infinite linear;
+}
+.cubebox4 {
+    -webkit-animation: spin4 8s infinite linear;
+}
+.cubebox5 {
+    -webkit-animation: spin5 8s infinite linear;
+}
+.cubebox6 {
+    -webkit-animation: spin6 8s infinite linear;
+}
+
+/*.cube_show {*/
+    /*animation:show 1s;*/
+    /*-webkit-animation:show 1s infinite;*/
+/*}*/
+
+/*@-webkit-keyframes show {*/
+    /*0%   {*/
+        /*width: 200px;*/
+        /*height: 200px;*/
+    /*}*/
+    /*25%  {*/
+        /*width: 200px;*/
+        /*height: 200px;*/
+    /*}*/
+    /*50%  {*/
+        /*width: 200px;*/
+        /*height: 200px;*/
+    /*}*/
+    /*100% {*/
+        /*width: 200px;*/
+        /*height: 200px;*/
+    /*}*/
+/*}*/
